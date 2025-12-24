@@ -51,3 +51,6 @@ require("lazy").setup({
   },
 })
 
+-- Setup extra filetype recognition
+require("config.filetypes")
+
