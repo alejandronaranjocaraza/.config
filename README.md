@@ -1,4 +1,4 @@
-# Personal `.config` files — Debian 13 · i3 minimalist setup**
+# Personal *.config* files — Debian 13 · i3 minimalist setup
 Alejandro Naranjo Caraza · `2024-05-01`
  
 ---
