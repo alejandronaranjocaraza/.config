@@ -1,38 +1,84 @@
-Alejandro Naranjo Caraza<br>
-Created 2024-05-01
-
-Personal use basic .config files for debian-13.
-Notes on debian setup libraries used.
-
-# DEBIAN I3 MINIMALIST SETUP - CORE LIBRARIES
-
-[GRAPHICAL FOUNDATION]
-- xorg: The display server engine that renders graphics.
-- xinit: Utility to manually start the GUI from a terminal (startx).
-- xserver-xorg-legacy: Permission wrapper to run Xorg as a normal user.
-
-[WINDOW MANAGEMENT]
-- i3-wm: The tiling window manager that handles your workspace.
-- rofi: The application launcher and search menu ($mod+d).
-- polybar: The status bar library for system information.
-
-[SYSTEM UTILITIES]
-- kitty: GPU-accelerated terminal emulator.
-- nemo: File manager for browsing folders and drives.
-- feh: Lightweight library for setting the desktop wallpaper.
-- lxappearance: Tool for setting GTK themes, icons, and cursors.
-
-[HARDWARE & AUDIO]
-- libinput: The driver library for mouse/touchpad settings.
-- pulseaudio-utils: Provides 'pactl' to control volume via keys.
-- pavucontrol: Visual audio mixer for managing speakers/mics.
-- brightnessctl: Library to control screen backlight levels.
-
-[APPLICATIONS]
-- neovim: Terminal-based text editor for configuration.
-- firefox-esr: Stable web browser for Debian.
-- thorium-browser: Performance-optimized Chromium for i7 CPUs.
-
+# Personal `.config` files — Debian 13 · i3 minimalist setup**
+Alejandro Naranjo Caraza · `2024-05-01`
+ 
+---
+ 
+## Contents
+ 
+| Config | Description |
+|--------|-------------|
+| `i3/` | Tiling window manager config |
+| `kitty/` | GPU-accelerated terminal emulator |
+| `nvim/` | Neovim editor setup |
+| `pycom/` | Pycom configuration |
+| `polybar/` | Status bar config |
+ 
+---
+ 
+## System Libraries Reference
+ 
+Personal setup notes for a clean Debian 13 i3 install.
+ 
+### Graphical Foundation
+ 
+```
+xorg                  Display server — renders graphics
+xinit                 Start the GUI manually from TTY (startx)
+xserver-xorg-legacy   Permission wrapper to run Xorg as a normal user
+```
+ 
+### Window Management
+ 
+```
+i3-wm                 Tiling window manager
+rofi                  App launcher / search menu  ($mod+d)
+polybar               Status bar for system info
+```
+ 
+### System Utilities
+ 
+```
+kitty                 GPU-accelerated terminal emulator
+nemo                  File manager
+feh                   Set the desktop wallpaper
+lxappearance          Configure GTK themes, icons, and cursors
+```
+ 
+### Hardware & Audio
+ 
+```
+libinput              Driver for mouse / touchpad input
+pulseaudio-utils      Provides `pactl` for keybind volume control
+pavucontrol           GUI audio mixer for speakers and mics
+brightnessctl         Control screen backlight brightness
+```
+ 
+### Applications
+ 
+```
+neovim                Terminal text editor
+firefox-esr           Stable Debian browser
+thorium-browser       Performance-optimized Chromium build for i7 CPUs
+```
+ 
+---
+ 
+## Quick Install
+ 
+```bash
+# Clone into your home config directory
+git clone https://github.com/<you>/dots ~/.config-dots
+ 
+# Symlink what you need
+ln -s ~/.config-dots/i3       ~/.config/i3
+ln -s ~/.config-dots/kitty    ~/.config/kitty
+ln -s ~/.config-dots/nvim     ~/.config/nvim
+ln -s ~/.config-dots/polybar  ~/.config/polybar
+```
+ 
+---
+ 
+> Personal use only. No warranty implied.
 [CONFIG LOCATIONS]
 - ~/.config/i3/config
 - ~/.config/polybar/config.ini
